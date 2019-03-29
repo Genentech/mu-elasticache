@@ -92,3 +92,15 @@ Resources:
       SecurityGroupIds:
         - Fn::ImportValue:
             Ref: ServiceSecurityGroup
+
+Outputs:
+  ElasticacheClusterEndpointAddress:
+    Description: "Elastic Cache Cluster Endpoint Address"
+    Value: 
+      Fn::Sub:
+        ${ElasticacheCluster.RedisEndpoint.Address}
+  ElasticacheClusterEndpointPort:
+    Description: "Elastic Cache Cluster Endpoint Port"
+    Value: 
+      Fn::Sub:
+        ${ElasticacheCluster.RedisEndpoint.Port}
