@@ -24,8 +24,8 @@ via mu.yml
 
 ```
 environment:
-  REDIS_HOST: ${ElasticacheCluster.RedisEndpoint.Address}
-  REDIS_PORT: ${ElasticacheCluster.RedisEndpoint.Port}
+  REDIS_HOST: ${ElasticacheCluster.PrimaryEndPoint.Address}
+  REDIS_PORT: ${ElasticacheCluster.PrimaryEndPoint.Port}
 ```
 
 The following parameters are configurable
